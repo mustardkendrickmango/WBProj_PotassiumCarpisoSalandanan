@@ -14,6 +14,7 @@
         }
 
         header {
+            height: 50vh;
             margin: auto;
         }
 
@@ -21,6 +22,29 @@
             flex-direction: row;
             border: 1px;
             border-radius: 10px;
+        }
+
+        table {
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            border-collapse: separate;
+            border-spacing: 1px;
+            border: 1.5px solid #d14d6c;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px auto;
+            background-color:rgba(249, 228, 178, 0.5);
+            box-shadow: 0 0 20px #cf687e;
+            width:67%;
+            table-layout: auto;
+            z-index: 1;
+        }
+
+
+        footer {
+            margin-top: auto;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -39,11 +63,13 @@
     </header>
 
     <section class="protagonist">
-        <div class="characters-grid">
-            <a href="char_protagonist.html">Protagonists</a>
-                <img src="">
-            <a href="char_antagonist.html">Antagonists</a>
-                <img src="">
+        <div class="charsacters-grid">
+            <table>
+                <th>Itadori Yuji</th>
+                <th>Fushiguro Megumi</th>
+                <th>Kugisaki Nobara</th>
+                <th>Gojo Satoru</th>
+            </table>
         </div>
     </section>
 
