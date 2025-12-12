@@ -127,7 +127,7 @@ function loop() {
 
   requestAnimationFrame(loop);
 
-  if (++count < 4) return;
+  if (++count < 8) return;
   count = 0;
 
  
@@ -153,7 +153,7 @@ function loop() {
   context.fillStyle = 'red';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
-  context.fillStyle = '#282D3F';
+  context.fillStyle = '#662b61';
   snake.cells.forEach(function(cell, index) {
     context.fillRect(cell.x, cell.y, grid-1, grid-1);
 
