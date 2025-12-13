@@ -18,24 +18,20 @@
             height: 50vh;
         }
 
-        .jjk-characters, .character-grid {
+        .character-grid {
+            display: flex;
             justify-content: center;
-            text-align: center;
             flex-direction: row;
+            gap: 20px;
+            unicode-bidi: isolate;
             size: 50px;
             border: 1px;
             border-radius: 10px;
         }
 
-        .jjk-characters, .character-grid a {
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #eeadad;
-            margin: 10px;
-            justify-content: center;
-            text-align: center;
-            flex-direction: row;
+        a {
+        cursor: pointer;
+        text-decoration: underline;
         }
     </style>
 </head>
@@ -56,9 +52,9 @@
     <section class="jjk characters">
         <div class="characters-grid">
             <a href="char_protagonist.html">Protagonists</a>
-                <img src="">
+                <img src="assets/protagonist.jpg" alt="Protagonist Image">
             <a href="char_antagonist.html">Antagonists</a>
-                <img src="">
+                <img src="assests/antagonist.jpg" alt="Antagonist Image">
         </div>
     </section>
 
