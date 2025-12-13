@@ -91,14 +91,15 @@ header p {
 }
 
 footer {
-    background-color: #eeeded;
+    background-color: #131111;
+    font: 'Comic-Relief', sans-serif;
     text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 20px;
     margin-top: auto;
-    color: #1c0f0f;
+    color: #fbfbfb;
 }
 
 .comic-relief-regular {
@@ -115,7 +116,7 @@ footer {
 
 .jjk {
     font-family:'Comic-Relief', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #222222;
     padding: 20px 20px;
     margin: 10px auto;
     margin-bottom: 40px;
