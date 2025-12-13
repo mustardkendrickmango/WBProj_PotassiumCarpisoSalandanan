@@ -1,81 +1,260 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Jujutsu Chronicles</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Sekuya&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href=".assets/favicon.png">
-    
-    <style>
-        .home-lenk{
-            margin-right:auto;
-        }
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jujutsu Chronicles</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Sekuya&display=swap" rel="stylesheet">
 
-        header {
-            height: 50vh;
-            margin: auto;
-        }
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        .jjk-characters .character-grid {
-            flex-direction: row;
-            border: 1px;
-            border-radius: 10px;
-        }
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
 
-        table {
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            border-collapse: separate;
-            border-spacing: 1px;
-            border: 1.5px solid #d14d6c;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 15px auto;
-            background-color:rgba(253, 249, 240, 0.897);
-            color:#ad4c63;
-            box-shadow: 0 0 20px #cf687e;
-            width:67%;
-            table-layout: auto;
-            z-index: 1;
-        }
+            body {
+                display: flex;
+                flex-direction: column;
+                font-family: 'Comic Relief', sans-serif;
+                color: white;
+                padding: 40px;
+            }
 
+            nav {
+                display: flex;
+                gap: 20px;
+            }
 
-        footer {
-            margin-top: auto;
-            margin-bottom: 0;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="../index.html" class = "home-lenk">Home 🏠︎</a>
-        <a href="lore.html">Lore</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="characters.html">Characters</a>
-        <a href="mini_games.html">Mini Games</a>
-        <a href="about_us.html">About Us</a>
-    </nav>
+            .home-lenk {
+                margin-right: auto;
+            }
 
-    <header>
-        <h1>Protagonists</h1>
-    </header>
+            main {
+                flex: 1;
+            }
 
-    <section class="protagonist">
-        <div class="protagonist-grid">
-            <table>
-                <th>Itadori Yuji</th>
-                <th>Fushiguro Megumi</th>
-                <th>Kugisaki Nobara</th>
-                <th>Gojo Satoru</th>
-            </table>
+            header {
+                margin-top: 40px;
+                margin-bottom: 20px;
+                height: 60px;
+                font-family: 'Sekuya', sans-serif;
+                font-size: 30px;
+            }
+
+            .page-container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .characters {
+                max-width: 1000px;
+                margin: 0 auto;
+                flex: 1;
+            }
+
+            .protagonist-gallery {
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+                margin-bottom: 20px;
+            }
+
+            .chr-card {
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .character {
+                width: 150px;
+                border-radius: 12px;
+                border: 1px solid #aaa;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .character:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px rgba(255,255,255,0.25);
+            }
+
+            .info-panel {
+                max-width: 900px;
+                margin: 0 auto;
+                background-color: #f6e4fd;
+                border-radius: 12px;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                padding: 0 24px;
+                transition: max-height 0.45s ease, opacity 0.3s ease;
+            }
+
+            .info-panel.show {
+                max-height: 400px;
+                opacity: 1;
+                padding: 24px;
+            }
+
+            .info-panel h2 {
+                margin-top: 0;
+                color: #222;
+            }
+
+            .info-panel p {
+                color: #222;
+                line-height: 1.6;
+                margin: 4px 0;
+            }
+
+            .backbtn {
+                cursor: pointer;
+                text-decoration: none;
+                font-family: 'Comic-Relief', sans-serif;
+                font-size: 18px;
+                color:#dfdddd;
+                margin-left:50px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="page-container">
+        <nav>
+            <a href="../index.html" class="home-lenk">Home 🏠︎</a>
+            <a href="lore.html">Lore</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="characters.html">Characters</a>
+            <a href="mini_games.html">Mini Games</a>
+            <a href="about_us.html">About Us</a>
+        </nav>
+
+        <main>
+            <header>
+                <h2>Protagonists</h2>
+            </header>
+
+            <section class="characters">
+
+                <div class="protagonist-gallery">
+
+                    <div class="chr-card">
+                        <img src="assets/yuji.jpg" class="character" alt="Itadori">
+
+                        <div class="chr-info" hidden>
+                            <h3>Itadori Yuji</h3>
+                            <div class="info-content">
+                                <p><strong>Birthday:</strong> March 20</p>
+                                <p><strong>Age:</strong> 15</p>
+                                <p><strong>Occupation:</strong> Jujutsu Sorcerer</p>
+                                <p><strong>Affiliation:</strong> Tokyo Jujutsu High</p>
+                                <p><strong>Abilities:</strong> Superhuman strength, Sukuna vessel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chr-card">
+                        <img src="assets/megumi.jpg" class="character" alt="Megumi">
+
+                        <div class="chr-info" hidden>
+                            <h3>Fushiguro Megumi</h3>
+                            <div class="info-content">
+                                <p><strong>Birthday:</strong> December 22</p>
+                                <p><strong>Age:</strong> 15</p>
+                                <p><strong>Occupation:</strong> Jujutsu Sorcerer</p>
+                                <p><strong>Affiliation:</strong> Tokyo Jujutsu High</p>
+                                <p><strong>Abilities:</strong> Ten Shadows Technique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chr-card">
+                        <img src="assets/nobara.jpg" class="character" alt="Nobara">
+
+                        <div class="chr-info" hidden>
+                            <h3>Kugisaki Nobara</h3>
+                            <div class="info-content">
+                                <p><strong>Birthday:</strong> August 7</p>
+                                <p><strong>Age:</strong> 16</p>
+                                <p><strong>Occupation:</strong> Jujutsu Sorcerer</p>
+                                <p><strong>Affiliation:</strong> Tokyo Jujutsu High</p>
+                                <p><strong>Abilities:</strong> Straw Doll Technique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chr-card">
+                        <img src="assets/satoru.jpg" class="character" alt="Gojo">
+
+                        <div class="chr-info" hidden>
+                            <h3>Gojo Satoru</h3>
+                            <div class="info-content">
+                                <p><strong>Birthday:</strong> December 7</p>
+                                <p><strong>Age:</strong> 28</p>
+                                <p><strong>Occupation:</strong> Jujutsu Sorcerer</p>
+                                <p><strong>Affiliation:</strong> Tokyo Jujutsu High</p>
+                                <p><strong>Abilities:</strong> Limitless, Six Eyes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="info-panel" class="info-panel">
+                    <h2 id="char-name"></h2>
+                    <div id="char-desc"></div>
+                </div>
+
+            </section>
+        </main>
+
+        <a href="characters.html" class="backbtn">◀️BACK</a>
+
+        <footer>
+            <p>© 2025 C. Carpiso, T. Salandanan</p>
+            <a href="sources.html">Sources</a>
+        </footer>
         </div>
-    </section>
+            <script>
+            const cards = document.querySelectorAll(".chr-card");
+            const panel = document.getElementById("info-panel");
+            const title = document.getElementById("char-name");
+            const content = document.getElementById("char-desc");
 
-    <footer>
-        <p>© 2025 C. Carpiso, T. Salandanan</p>
-        <a href="sources.html">Sources</a>
-    </footer>
-</body>
+            let activeCard = null;
+
+            cards.forEach(card => {
+                card.addEventListener("click", () => {
+                    const info = card.querySelector(".chr-info");
+
+                    if (activeCard === card) {
+                        panel.classList.remove("show");
+                        activeCard = null;
+                        return;
+                    }
+
+                    title.textContent = info.querySelector("h3").textContent;
+                    content.innerHTML = info.querySelector(".info-content").innerHTML;
+
+                    panel.classList.add("show");
+                    activeCard = card;
+
+                    panel.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                });
+            });
+            </script>
+    </body>
+    </html>
