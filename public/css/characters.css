@@ -1,8 +1,11 @@
         header {
             margin: auto;
-            margin-top: 80px;
+            margin-top: 25px;
             margin-bottom: 30px;
-            height: 100px;
+            height: 225px;
+            background-image: url(../assets/headerbg/bg3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .characters {

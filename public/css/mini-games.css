@@ -13,10 +13,15 @@
   }
 
   header {
-          margin: auto;
-          margin-top: 80px;
-          margin-bottom: 30px;
-          height: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 225px;
+    font-family: 'Sekuya', sans-serif;
+    font-size: 30px;
+    background-image: url(../assets/headerbg/bg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 4px 4px 8px #000000;
   }
 
 .game-container {
