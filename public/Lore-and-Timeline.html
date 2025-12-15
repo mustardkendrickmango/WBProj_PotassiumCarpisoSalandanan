@@ -260,23 +260,12 @@
       <!-- 6 -->
       <div class="accordion">
         <h3>
-          <button
-            class="accordion-trigger"
-            aria-expanded="false"
-            aria-controls="sect6"
-            id="acc6"
-          >
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="sect6" id="acc6">
             ITADORI'S EXTERMINATION ARC
             <span class="accordion-icon"></span>
           </button>
         </h3>
-        <div
-          id="sect6"
-          class="accordion-panel"
-          role="region"
-          aria-labelledby="acc6"
-          hidden
-        >
+        <div id="sect6" class="accordion-panel" role="region" aria-labelledby="acc6" hidden>
           <p><strong>Identifier:</strong> Itadori’s Extermination Arc</p>
           <div class="slider">
             <button class="prev">❮</button>
@@ -295,33 +284,23 @@
       <!-- 7 -->
       <div class="accordion">
         <h3>
-          <button
-            class="accordion-trigger"
-            aria-expanded="false"
-            aria-controls="sect7"
-            id="acc7"
-          >
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="sect7" id="acc7">
             PERFECT PREPARATION ARC
             <span class="accordion-icon"></span>
           </button>
         </h3>
-        <div
-          id="sect7"
-          class="accordion-panel"
-          role="region"
-          aria-labelledby="acc7"
-          hidden
-        >
+        <div id="sect7" class="accordion-panel" role="region" aria-labelledby="acc7" hidden>
           <p><strong>Identifier:</strong> Perfect Preparation Arc</p>
           <div class="slider">
             <button class="prev">❮</button>
             <div class="slides">
-              <img src="assets/perfectpreparationslider/amonster.png" class="active" alt="Arc 7 image 1" />
-              <img src="assets/perfectpreparationslider/maki.png" alt="Arc 7 image 2" />
-              <img src="assets/perfectpreparationslider/HAKARIII.png" alt="Arc 7 image 3" />
-              <img src="assets/perfectpreparationslider/yaga.png" alt="Arc 7 image 4" />
-              <img src="assets/perfectpreparationslider/yuji.png" alt="Arc 7 image 5" />
-              <img src="assets/perfectpreparationslider/tengen.png" alt="Arc 7 image 5" />
+              <img src="assets/perfectpreparationslider/perfectpreparation.jpg" class="active" alt="Arc 7 image 1" />
+              <img src="assets/perfectpreparationslider/amonster.png" alt="Arc 7 image 2" />
+              <img src="assets/perfectpreparationslider/maki.png" alt="Arc 7 image 3" />
+              <img src="assets/perfectpreparationslider/HAKARIII.png" alt="Arc 7 image 4" />
+              <img src="assets/perfectpreparationslider/yaga.png" alt="Arc 7 image 5" />
+              <img src="assets/perfectpreparationslider/yuji.png" alt="Arc 7 image 6" />
+              <img src="assets/perfectpreparationslider/tengen.png" alt="Arc 7 image 7" />
             </div>
             <button class="next">❯</button>
           </div>
@@ -331,23 +310,12 @@
       <!-- 8 -->
       <div class="accordion">
         <h3>
-          <button
-            class="accordion-trigger"
-            aria-expanded="false"
-            aria-controls="sect8"
-            id="acc8"
-          >
+          <button class="accordion-trigger" ria-expanded="false" aria-controls="sect8" id="acc8">
             CULLING GAME ARC
             <span class="accordion-icon"></span>
           </button>
         </h3>
-        <div
-          id="sect8"
-          class="accordion-panel"
-          role="region"
-          aria-labelledby="acc8"
-          hidden
-        >
+        <div id="sect8" class="accordion-panel" role="region" aria-labelledby="acc8" hidden>
           <p><strong>Identifier:</strong> Culling Game Arc</p>
           <div class="slider">
             <button class="prev">❮</button>
@@ -412,63 +380,10 @@
     </main>
 
     <footer>
-      <p>© 2025 C. Carpiso, T. Salandanan</p>
+      <p>© 2025 Yogurt Studios</p>
       <a href="sources.html">Sources</a>
     </footer>
 
-    <script>
-"use strict";
-
-/* ACCORDION */
-document.querySelectorAll(".accordion h3").forEach((header) => {
-  const button = header.querySelector("button");
-  const panel = document.getElementById(
-    button.getAttribute("aria-controls")
-  );
-
-  button.addEventListener("click", () => {
-    const expanded = button.getAttribute("aria-expanded") === "true";
-
-    if (expanded) {
-      button.setAttribute("aria-expanded", "false");
-      panel.setAttribute("hidden", "");
-    } else {
-      button.setAttribute("aria-expanded", "true");
-      panel.removeAttribute("hidden");
-
-      // Initialize slider when accordion opens
-      const slider = panel.querySelector(".slider");
-      if (slider) {
-        const slides = slider.querySelectorAll("img");
-        slides.forEach((img) => img.classList.remove("active"));
-        if (slides.length > 0) slides[0].classList.add("active");
-      }
-    }
-  });
-});
-
-/* SLIDER */
-document.querySelectorAll(".slider").forEach((slider) => {
-  let index = 0;
-  const slides = slider.querySelectorAll("img");
-  const prev = slider.querySelector(".prev");
-  const next = slider.querySelector(".next");
-
-  function showSlide(i) {
-    slides.forEach((img) => img.classList.remove("active"));
-    slides[i].classList.add("active");
-  }
-
-  prev.addEventListener("click", () => {
-    index = index === 0 ? slides.length - 1 : index - 1;
-    showSlide(index);
-  });
-
-  next.addEventListener("click", () => {
-    index = index === slides.length - 1 ? 0 : index + 1;
-    showSlide(index);
-  });
-});
-    </script>
+    <script src="javascript/timeline.js"></script>
   </body>
 </html>
