@@ -1,4 +1,4 @@
-            * {
+             * {
                 box-sizing: border-box;
             }
 
@@ -25,7 +25,7 @@
             }
 
             main {
-                flex: 1;
+                    flex: 1;
             }
 
             header {
@@ -37,7 +37,7 @@
                 background-image: url(../assets/headerbg/bg6.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
-                text-shadow: 4px 4px 8px #000000;
+                text-shadow: 4px 4px 8px #000000
             }
 
             .page-container {
@@ -99,7 +99,7 @@
                 border-radius: 4px;
             }
 
-            .id-details {
+            .id-details {   
                 flex: 1;
             }
 

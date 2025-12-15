@@ -23,22 +23,38 @@
         <h1>Mini Game</h1>
     </header>
 
-<div class="game-container">
-  <div class="game-wrapper-outer">
-    <div class="game-wrapper">
-        <canvas width="400" height="400" id="game"></canvas>
-        <div id="scoreboard">Score: 0</div>
-    </div>    
-  </div>
-    <button id="playBtn">Play</button>
+    <h2>The Very Hungry Worm</h2>
 
-</div>
+    <div class="game-overview">
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <p>Toji's worm [name] is very hungry! He hasn't eaten since Toji left him.</p>
+            <p>Help [name/Toji's worm] eat all the apples!</p>
+        </div>
+        <div class="how-to-play">
+            <h3>How to Play</h3>
+            <p>Press Play to start</p>
+            <p>Use your WASD keys to move up, down, left, right.</p>
+            <p>The worm can go through walls.</p>
+            <p>The only catch is, <strong>you can't eat yourself.</strong></p>
+        </div>
+    </div>
+
+    <div class="game-container">
+    <div class="game-wrapper-outer">
+        <div class="game-wrapper">
+            <canvas width="350" height="350" id="game"></canvas>
+            <div id="scoreboard">Score: 0</div>
+        </div>    
+    </div>
+        <button id="playBtn">Play</button>
+    </div>
 
     <footer>
         <p>© 2025 C. Carpiso, T. Salandanan</p>
         <a href="sources.html">Sources</a>
     </footer>
 
-<script src="javascript/snake.js"></script>
+    <script src="javascript/snake.js"></script>
 </body>
 </html>
